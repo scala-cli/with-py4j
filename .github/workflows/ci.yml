@@ -16,6 +16,8 @@ jobs:
         fetch-depth: 0
     - uses: coursier/cache-action@v6.3
     - uses: VirtusLab/scala-cli-setup@v0.1
+      with:
+        jvm: 8
     - name: Compile
       run: scala-cli compile . --cross
 
@@ -29,6 +31,8 @@ jobs:
         fetch-depth: 0
     - uses: coursier/cache-action@v6.3
     - uses: VirtusLab/scala-cli-setup@v0.1
+      with:
+        jvm: 8
     - name: Publish
       run: scala-cli publish . --cross
       env:
