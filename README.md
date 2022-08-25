@@ -4,7 +4,11 @@ Helper application to start another app with a [py4j](https://github.com/py4j/py
 
 Use like
 ```text
-$ cs launch io.get-coursier:echo:1.0.5 io.github.alexarchambault.py4j:with-py4j:0.1.0 -M withpy4j.WithPy4j -- coursier.echo.Echo aa bb
+$ cs launch io.get-coursier:echo:1.0.5 \
+    io.github.alexarchambault.py4j:with-py4j:0.1.0 \
+    -M withpy4j.WithPy4j \
+    -- \
+      coursier.echo.Echo aa bb
 aa bb
 ```
 
